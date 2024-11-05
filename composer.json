@@ -26,9 +26,9 @@
             "title": "TeleNoti",
             "category": "",
             "icon": {
-                "name": "",
-                "color": "",
-                "backgroundColor": ""
+                "name": "far fa-paper-plane",
+                "color": "#ffffff",
+                "backgroundColor": "#007bff"
             }
         },
         "flarum-cli": {
