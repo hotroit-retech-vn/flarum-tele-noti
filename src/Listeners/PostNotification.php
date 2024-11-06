@@ -54,21 +54,10 @@ class PostNotification
         // $message =  $title . " [link](" . $link . ")";
         $message = "
             # 🎉 **$title** 🎉
-
             ---
-
             ### 🔗 **[Nhấp vào đây để xem liên kết]($link)**
-
             ---
-
             ### 📅 *Cập nhật vào:* " . date('Y-m-d H:i') . "
-
-            ---
-
-            💬 *Cảm ơn bạn đã là một phần của cộng đồng chúng tôi!* 😊
-
-            ---
-
             > *Hãy theo dõi để nhận thêm các cập nhật mới!* ✨
             ";
 
