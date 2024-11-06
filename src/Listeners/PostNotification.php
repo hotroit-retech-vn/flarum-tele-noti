@@ -57,20 +57,21 @@ class PostNotification
 
             ---
 
-            ### 🔗 **[Click here to view the link]($link)**
+            ### 🔗 **[Nhấp vào đây để xem liên kết]($link)**
 
             ---
 
-            ### 📅 *Updated on:* " . date('Y-m-d H:i') . "
+            ### 📅 *Cập nhật vào:* " . date('Y-m-d H:i') . "
 
             ---
 
-            💬 *Thank you for being part of our community!* 😊
+            💬 *Cảm ơn bạn đã là một phần của cộng đồng chúng tôi!* 😊
 
             ---
 
-            > *Stay tuned for more updates!* ✨
+            > *Hãy theo dõi để nhận thêm các cập nhật mới!* ✨
             ";
+
 
 
 
