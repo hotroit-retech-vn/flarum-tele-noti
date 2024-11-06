@@ -65,10 +65,12 @@ class PostNotification
         $chatId1 = '-4559681927';
         $chatId2 = '-4534475318';
 
-        $this->sendMessage($chatId1, $message);
+        if( $post->number && $post->number == 1) {
+            $this->sendMessage($chatId1, $message);
 
-        if ($tag_slug === 'tim-support') {
-            $this->sendMessage($chatId2, $message);
+            if ($tag_slug === 'tim-support') {
+                $this->sendMessage($chatId2, $message);
+            }
         }
     }
 
