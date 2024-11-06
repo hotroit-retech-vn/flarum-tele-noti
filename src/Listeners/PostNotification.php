@@ -48,9 +48,10 @@ class PostNotification
     private function SendNotification($post)
     {
         $tag_slug = $post->discussion->tags[0]->slug;
+        $title = $post->discussion->title;
         $link = Arr::get(static::$flarumConfig, 'url') . '/d/' . $post->discussion->id . '-' . $post->discussion->slug . '/' . $post->number;
 
-        $message = "[" . $link . "](" . $link . ")";
+        $message =  $title . " [link](" . $link . ")";
 
 
         $chatId1 = '-4559681927';
@@ -58,7 +59,7 @@ class PostNotification
 
         $this->sendMessage($chatId1, $message);
 
-        if ($tag_slug === 'nhan-code-thue') {
+        if ($tag_slug === 'tim-support') {
             $this->sendMessage($chatId2, $message);
         }
     }
