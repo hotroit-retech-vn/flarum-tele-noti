@@ -51,7 +51,27 @@ class PostNotification
         $title = $post->discussion->title;
         $link = Arr::get(static::$flarumConfig, 'url') . '/d/' . $post->discussion->id . '-' . $post->discussion->slug . '/' . $post->number;
 
-        $message =  $title . " [link](" . $link . ")";
+        // $message =  $title . " [link](" . $link . ")";
+        $message = "
+            # 🎉 **$title** 🎉
+
+            ---
+
+            ### 🔗 **[Click here to view the link]($link)**
+
+            ---
+
+            ### 📅 *Updated on:* " . date('Y-m-d H:i') . "
+
+            ---
+
+            💬 *Thank you for being part of our community!* 😊
+
+            ---
+
+            > *Stay tuned for more updates!* ✨
+            ";
+
 
 
         $chatId1 = '-4559681927';
