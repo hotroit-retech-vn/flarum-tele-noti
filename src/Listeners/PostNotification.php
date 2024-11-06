@@ -51,7 +51,7 @@ class PostNotification
         $title = $post->discussion->title;
         $link = Arr::get(static::$flarumConfig, 'url') . '/d/' . $post->discussion->id . '-' . $post->discussion->slug;
 
-        $message = "🎉 **$title** 🎉\n 🔗 **[]($link)**";
+        $message = "🎉 **$title** 🎉\n 🔗 **[$link]($link)**";
 
         $chatId1 = '-4559681927';
         $chatId2 = '-4534475318';
