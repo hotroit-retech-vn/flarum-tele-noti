@@ -52,12 +52,12 @@ class PostNotification
         $link = Arr::get(static::$flarumConfig, 'url') . '/d/' . $post->discussion->id . '-' . $post->discussion->slug . '/' . $post->number;
 
         // $message =  $title . " [link](" . $link . ")";
-$message = "🎉 **$title** 🎉
----
-🔗 **[Nhấp vào đây để xem liên kết]($link)**
----
-📅 *Cập nhật vào:* " . date('Y-m-d H:i') . "
-Hãy theo dõi để nhận thêm các cập nhật mới!* ✨";
+        $message = "🎉 **$title** 🎉
+        ---
+        🔗 **[]($link)**
+        ---
+        📅 *Cập nhật vào:* " . date('Y-m-d H:i') . "
+        Hãy theo dõi để nhận thêm các cập nhật mới!* ✨";
 
 
 
