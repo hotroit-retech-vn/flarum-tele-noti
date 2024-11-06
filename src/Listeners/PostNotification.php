@@ -49,26 +49,17 @@ class PostNotification
     {
         $tag_slug = $post->discussion->tags[0]->slug;
         $title = $post->discussion->title;
-        $link = Arr::get(static::$flarumConfig, 'url') . '/d/' . $post->discussion->id . '-' . $post->discussion->slug . '/' . $post->number;
+        $link = Arr::get(static::$flarumConfig, 'url') . '/d/' . $post->discussion->id . '-' . $post->discussion->slug;
 
-        // $message =  $title . " [link](" . $link . ")";
-        $message = "🎉 **$title** 🎉
-        ---
-        🔗 **[]($link)**
-        ---
-        📅 *Cập nhật vào:* " . date('Y-m-d H:i') . "
-        Hãy theo dõi để nhận thêm các cập nhật mới!* ✨";
-
-
-
+        $message = "🎉 **$title** 🎉\n 🔗 **[]($link)**";
 
         $chatId1 = '-4559681927';
         $chatId2 = '-4534475318';
 
-        if( $post->number && $post->number == 1) {
+        if ($post->number && $post->number == 1) {
             $this->sendMessage($chatId1, $message);
 
-            if ($tag_slug === 'tim-support') {
+            if ($tag_slug == 'tim-support') {
                 $this->sendMessage($chatId2, $message);
             }
         }
