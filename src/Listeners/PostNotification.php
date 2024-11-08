@@ -54,7 +54,7 @@ class PostNotification
         $message = "🎉 **$title** 🎉\n 🔗 **[$link]($link)**";
 
         $chatId1 = '-4559681927';
-        $chatId2 = '-4534475318';
+        $chatId2 = '-1002489733502';
 
         if ($post->number && $post->number == 1) {
             // $this->sendMessage($chatId1, $message);
