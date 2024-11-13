@@ -53,7 +53,7 @@ class PostNotification
 
         $message = "🎉 **$title** 🎉\n 🔗 **[$link]($link)**";
 
-        $chatId1 = '-4559681927';
+        $chatId1 = '-4137995466';
         $chatId2 = '-1002489733502';
 
         if ($post->number && $post->number == 1) {
@@ -61,6 +61,9 @@ class PostNotification
 
             if ($tag_slug == 'tim-support') {
                 $this->sendMessage($chatId2, $message);
+            }
+            if ($tag_slug == 'thao-luan-chung') {
+                $this->sendMessage($chatId1, $message);
             }
         }
     }
